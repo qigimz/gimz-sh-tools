@@ -1,0 +1,17 @@
+#! /bin/bash
+# -*- coding: -*-
+# Gimz
+#2018-11-17 V1.0
+
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+export PATH
+
+echo "Pi_status"
+
+Date=`date`
+echo "Date: ${Date}"
+
+cpu_temperature=`cat /sys/class/thermal/thermal_zone0/temp`
+echo "cpu_temperature => $(( cpu_temperature / 1000 ))"
+
+
